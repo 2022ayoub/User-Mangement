@@ -1,0 +1,10 @@
+<div class="nav">
+    <div class="logo">
+        <h1>Users Management</h1>
+    </div>
+    <form class="search <%= path!=='home'?'hidenSearch':null %>" action="/search" method='post'>
+        <input type="text" name="search" id="search" placeholder="Search here">
+        <button type="submit">Search</button>
+    </form>
+    <div class="mode"></div>
+</div>

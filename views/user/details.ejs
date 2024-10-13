@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/details.css">
+</head>
+<body>
+    <div class="container">
+        <%-include('../components/side.ejs',{path:"details"})%>
+        <div class="separator"></div>
+        <div class="main">
+            <%-include('../components/nav.ejs',{path:'details'})%>
+            <div class="content">
+                <table >
+                    <tbody>
+                        <tr>
+                            <th>First Name : </th>
+                            <td><%= user.firstName %></td>
+                        </tr>
+                        <tr>
+                            <th>Last Name : </th>
+                            <td> <%= user.lastName %></td>
+                        </tr>
+                        <tr>
+                            <th>Telephone : </th>
+                            <td><%= user.telephone %></td>
+                        </tr>
+                        <tr>
+                            <th>Email : </th>
+                            <td><%= user.email %> </td>
+                        </tr>
+                        <tr>
+                            <th>Gender : </th>
+                            <td> <%= user.gender %> </td>
+                        </tr>
+                        <tr>
+                            <th>Age : </th>
+                            <td> <%= user.age %> </td>
+                        </tr>
+                        <tr>
+                            <th>Country : </th>
+                            <td> <%= user.country %> </td>
+                        </tr>
+                        <tr>
+                            <th>Created On : </th>
+                            <td> <%= moment(user.createdAt).format("MM-DD-YYYY hh:mm:ss") %> </td>
+                        </tr>
+                        <tr>
+                            <th>Last Update At :  </th>
+                            <td> <%=  moment(user.updatedAt).format("MM-DD-YYYY hh:mm:ss") %> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/side.js"></script>
+</body>
+</html>

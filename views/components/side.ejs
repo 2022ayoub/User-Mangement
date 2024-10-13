@@ -1,0 +1,26 @@
+<div class="sideBar">
+    <div class="sideTitle">
+        <div class="icons">
+            <i class="fa-solid fa-x circle"></i>
+            <i class="fa-solid fa-right-long flesh"></i>
+        </div>
+        <h1>sidebar</h1>
+    </div>
+    <div class="sideItem">
+        <ul>
+            <li class="<%= path==="home"?"active":null %>">
+                <a href="/" >
+                    <i class="fa-solid fa-house"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li class="<%= path==="add"?"active":null %>">
+                <!-- <a href="<%=path!=='home'?'../addUser.ejs':'../user/addUser.ejs'%>"> -->
+                <a href="/user/addUser">
+                    <i class="fa-solid fa-user"></i>
+                    <span>ADD AN USER</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
